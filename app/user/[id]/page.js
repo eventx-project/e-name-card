@@ -109,7 +109,7 @@ export default async function UserCard({ params }) {
                              
                              <div className="p-1 bg-white shrink-0">
                                 <QRCodeSVG 
-                                    value={`https://name-card.claunode.com/user/${id}`}
+                                    value={`https://e-bcard.eventx.io/user/${id}`}
                                     size={48}
                                     level="L"
                                     fgColor="#121517"
@@ -231,7 +231,7 @@ export default async function UserCard({ params }) {
                     variant="card"
                     title={`${name} - ${title}`} 
                     text={`Here's ${name} business card!`} 
-                    url={`https://name-card.claunode.com/user/${id}`} 
+                    url={`https://e-bcard.eventx.io/user/${id}`} 
                     cardTitle="Share"
                     cardSubtitle="Via QR or Link"
                 />
