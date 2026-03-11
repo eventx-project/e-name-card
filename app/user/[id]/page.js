@@ -265,9 +265,6 @@ export default async function UserCard({ params }) {
                     <div className="h-8 w-8 rounded-full bg-primary/5 flex items-center justify-center">
                         <span className="material-symbols-outlined text-primary text-sm">verified</span>
                     </div>
-                    <p className="text-[#657b86] dark:text-white/40 text-[10px] font-bold uppercase tracking-[0.2em] px-4 text-center">
-                        Powered by Claudia Tsoi
-                    </p>
                     <p className="text-[#657b86]/40 dark:text-white/20 text-[8px] font-mono mt-1">
                         ID: {id}
                     </p>

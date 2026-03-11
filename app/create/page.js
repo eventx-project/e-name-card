@@ -426,9 +426,6 @@ function CreateCardContent() {
                 >
                     {status === 'loading' ? 'Creating...' : 'Save Card'}
                 </button>
-                 <div className="text-[10px] text-gray-300 font-medium tracking-widest uppercase text-center">
-                   Powered by Claudia Tsoi
-                </div>
             </div>
         </footer>
     </div>

@@ -1,6 +1,6 @@
 # Electronic Business Card System
 
-This is a Next.js application used as a digital business card platform powered by Google Sheets.
+This is a Next.js application used as a digital business card platform powered by Google Sheets. Make sharing easier!
 
 ## Setup
 

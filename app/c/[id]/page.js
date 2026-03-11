@@ -201,9 +201,6 @@ export default async function InternalSalesCard({ params }) {
                     <div className="h-8 w-8 rounded-full bg-primary/5 flex items-center justify-center">
                         <span className="material-symbols-outlined text-primary text-sm">verified</span>
                     </div>
-                    <p className="text-[#657b86] dark:text-white/40 text-[10px] font-bold uppercase tracking-[0.2em] px-4 text-center">
-                        Powered by Claudia Tsoi
-                    </p>
                 </div>
             </footer>
          </main>

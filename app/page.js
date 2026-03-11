@@ -21,9 +21,6 @@ export default function Home() {
       </div>
 
        <div className="absolute bottom-6 text-center">
-            <div className="text-[10px] text-gray-300 font-medium tracking-widest uppercase">
-               Powered by Claudia Tsoi
-            </div>
        </div>
     </div>
   );

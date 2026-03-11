@@ -16,7 +16,7 @@ const notoSans = Noto_Sans({
 
 export const metadata = {
   title: "Create Your Digital Name card in 5 seconds!",
-  description: "Powered by Claudia Tsoi",
+  description: "Make sharing easier",
   manifest: "/manifest.json",
   icons: {
     icon: '/favicon.png',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   openGraph: {
     title: "Create Your Digital Name card in 5 seconds!",
-    description: "Powered by Claudia Tsoi",
+    description: "Make sharing easier",
     images: ['/favicon.png'],
   },
 };
