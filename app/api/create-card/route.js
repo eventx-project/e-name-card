@@ -22,7 +22,7 @@ export async function POST(request) {
     rateLimit.set(ip, now);
 
     const body = await request.json();
-    const { name, title, company, area_code, phone, is_whatsapp, email, linkedin, booking_url, others, bio, avatar, password } = body;
+    const { name, title, company, area_code, phone, is_whatsapp, email, linkedin, booking_url, others, bio, avatar, password, tag_id } = body;
     
     // Debug Auth
     console.log("Auth Email being used:", process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL);
@@ -90,6 +90,35 @@ export async function POST(request) {
     });
 
     await sheet.addRow(rowData);
+
+    // If tag_id is provided, try to claim the tag in NFC_Tags sheet
+    if (tag_id) {
+        try {
+            const tagSheet = await getSheet('NFC_Tags');
+            if (tagSheet) {
+               const rows = await tagSheet.getRows();
+               const tagRow = rows.find(r => r.get('tag_id') === tag_id);
+               if (tagRow) {
+                   tagRow.set('target_id', id);
+                   await tagRow.save();
+                   console.log(`Tag claimed by ${id}`);
+               } else {
+                   // If tag doesn't exist in sheet, maybe auto-create it?
+                   await tagSheet.addRow({
+                       tag_id: tag_id,
+                       target_id: id,
+                       created_at: new Date().toISOString()
+                   });
+                   console.log(`Tag created and claimed by ${id}`);
+               }
+            } else {
+                console.warn('NFC_Tags sheet not found');
+            }
+        } catch (tagError) {
+            console.error('Failed to claim tag:', tagError);
+            // Don't fail the card creation if tag claim fails, just log it
+        }
+    }
 
     return NextResponse.json({ id });
   } catch (error) {

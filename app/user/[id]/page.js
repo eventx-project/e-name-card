@@ -11,8 +11,9 @@ import AddToHomeScreenButton from '@/app/components/AddToHomeScreenButton';
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
-export default async function UserCard({ params }) {
+export default async function UserCard({ params, searchParams }) {
   const { id } = await params;
+  const { tag_id } = await searchParams;
   
   let row;
   try {
@@ -109,7 +110,7 @@ export default async function UserCard({ params }) {
                              
                              <div className="p-1 bg-white shrink-0">
                                 <QRCodeSVG 
-                                    value={`https://e-bcard.eventx.io/user/${id}`}
+                                    value={`https://name-card.claunode.com/user/${id}`}
                                     size={48}
                                     level="L"
                                     fgColor="#121517"
@@ -213,7 +214,7 @@ export default async function UserCard({ params }) {
             </div>
 
             <div className="mt-2 w-full px-2">
-                <Link href={`/create?ref=${id}`} className="w-full flex cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold transition-transform active:scale-95 shadow-lg shadow-primary/20 hover:bg-[#144f6d]">
+                <Link href={`/create?ref=${id}${tag_id ? `&tag_id=${tag_id}` : ''}`} className="w-full flex cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold transition-transform active:scale-95 shadow-lg shadow-primary/20 hover:bg-[#144f6d]">
                     <span>Create Your Own</span>
                     <span className="material-symbols-outlined text-lg">arrow_forward</span>
                 </Link>
@@ -231,7 +232,7 @@ export default async function UserCard({ params }) {
                     variant="card"
                     title={`${name} - ${title}`} 
                     text={`Here's ${name} business card!`} 
-                    url={`https://e-bcard.eventx.io/user/${id}`} 
+                    url={`https://name-card.claunode.com/user/${id}`} 
                     cardTitle="Share"
                     cardSubtitle="Via QR or Link"
                 />

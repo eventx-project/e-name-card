@@ -20,6 +20,7 @@ function CreateCardContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const referredBy = searchParams.get('ref') || '';
+  const tagId = searchParams.get('tag_id') || '';
   
   const [formData, setFormData] = useState({
     name: '',
@@ -143,7 +144,8 @@ function CreateCardContent() {
     try {
       const payload = {
         ...formData,
-        referred_by: referredBy
+        referred_by: referredBy,
+        tag_id: tagId // Pass the NFC tag ID if present
       };
 
       const res = await fetch('/api/create-card', {
