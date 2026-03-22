@@ -60,14 +60,16 @@ export default async function InternalSalesCard({ params }) {
                     
                     <div className="flex w-full flex-col items-start justify-center gap-6 px-8 py-8 min-h-[200px]">
                         <div className="w-full flex justify-center pb-2">
-                             <Image 
-                                src="/claunode_logo.png" 
-                                alt="Claunode" 
-                                width={40} 
-                                height={15} 
-                                className="object-contain" 
-                                priority
-                             />
+                             <a href="https://www.claunode.com" target="_blank" rel="noopener noreferrer">
+                                 <Image 
+                                    src="/claunode_logo.png" 
+                                    alt="Claunode" 
+                                    width={30} 
+                                    height={12} 
+                                    className="object-contain" 
+                                    priority
+                                 />
+                             </a>
                         </div>
                         <div className="flex w-full justify-between items-start">
                              {avatar ? (

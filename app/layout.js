@@ -18,14 +18,10 @@ export const metadata = {
   title: "Create Your Digital Name card in 5 seconds!",
   description: "Make sharing easier",
   manifest: "/manifest.json",
-  icons: {
-    icon: '/favicon.png',
-    apple: '/favicon.png',
-  },
   openGraph: {
     title: "Create Your Digital Name card in 5 seconds!",
     description: "Make sharing easier",
-    images: ['/favicon.png'],
+    images: ['/claunode_logo.png'],
   },
 };
 
