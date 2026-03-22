@@ -63,8 +63,8 @@ export default async function InternalSalesCard({ params }) {
                              <Image 
                                 src="/claunode_logo.png" 
                                 alt="Claunode" 
-                                width={160} 
-                                height={60} 
+                                width={40} 
+                                height={15} 
                                 className="object-contain" 
                                 priority
                              />

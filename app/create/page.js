@@ -190,7 +190,7 @@ function CreateCardContent() {
             {/* Text-based Minimalist Card - Scaled Down */}
             <div className="preview-card-shadow bg-white dark:bg-white/5 border border-[#dae5e7] dark:border-primary/30 rounded p-6 min-h-[180px] flex flex-col justify-between transition-all duration-300 max-w-[90%] mx-auto relative overflow-hidden">
                 <div className="absolute top-4 right-4 opacity-20 pointer-events-none">
-                     <Image src="/claunode_logo.png" alt="Logo" width={80} height={30} className="object-contain" />
+                     <Image src="/claunode_logo.png" alt="Logo" width={20} height={8} className="object-contain" />
                 </div>
                 <div className="flex flex-col gap-1">
                     <span className="text-primary text-[10px] font-bold tracking-[0.15em] uppercase mb-1">{formData.title || 'Job Title'}</span>
