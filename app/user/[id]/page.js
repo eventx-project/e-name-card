@@ -74,19 +74,6 @@ export default async function UserCard({ params, searchParams }) {
             {/* Central Digital Card */}
             <div className="relative group mt-4">
                 <div id="user-card-visual" className="whisper-shadow flex flex-col items-stretch justify-start rounded-xl bg-white border border-gray-200 overflow-hidden">
-                    {/* Top Banner (keeping EventX logic but integrated) */}
-                    <a href="https://eventx.io" target="_blank" rel="noopener noreferrer" className="w-full h-14 bg-white relative flex items-center justify-center py-2 overflow-hidden border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                        <div className="relative h-6 w-16 shrink-0">
-                             <Image 
-                                 src="/eventx-logo.png" 
-                                 alt="EventX" 
-                                 fill 
-                                 className="object-contain"
-                                 priority
-                                 unoptimized
-                             /> 
-                        </div>
-                    </a>
                     
                     <div className="flex w-full flex-col items-start justify-center gap-2 px-8 py-8 min-h-[200px]">
                         <div className="flex w-full justify-between items-start">
@@ -129,7 +116,7 @@ export default async function UserCard({ params, searchParams }) {
                         {bio && (
                             <div className="w-full">
                                 <p className="text-[#657b86] text-sm leading-relaxed whitespace-pre-wrap italic">
-                                    "{renderBio(bio)}"
+                                    &quot;{renderBio(bio)}&quot;
                                 </p>
                             </div>
                         )}
@@ -190,18 +177,9 @@ export default async function UserCard({ params, searchParams }) {
                             )}
                         </div>
 
-                        <div className="w-full pt-4 mt-auto border-t border-gray-100 flex items-center justify-center gap-1 opacity-60">
-                            <span className="text-[#657b86] text-[10px] font-bold uppercase tracking-wider">Powered by</span>
-                            <div className="relative h-3 w-12">
-                                <Image 
-                                     src="/eventx-logo.png" 
-                                     alt="EventX" 
-                                     fill 
-                                     className="object-contain grayscale opacity-80"
-                                     unoptimized
-                                /> 
-                            </div>
-                        </div>
+                        <a href="https://wa.me/85267636730" target="_blank" rel="noopener noreferrer" className="w-full pt-4 mt-auto border-t border-gray-100 flex items-center justify-center gap-1 opacity-60 hover:opacity-100 transition-opacity">
+                            <span className="text-[#657b86] text-[10px] font-bold uppercase tracking-wider">Powered by Claunode</span>
+                        </a>
                     </div>
                 </div>
             </div>
