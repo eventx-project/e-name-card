@@ -188,7 +188,10 @@ function CreateCardContent() {
         <section className="p-6">
             <h4 className="text-primary text-[10px] font-extrabold leading-normal tracking-[0.2em] mb-4 text-center uppercase">Live Digital Preview</h4>
             {/* Text-based Minimalist Card - Scaled Down */}
-            <div className="preview-card-shadow bg-white dark:bg-white/5 border border-[#dae5e7] dark:border-primary/30 rounded p-6 min-h-[180px] flex flex-col justify-between transition-all duration-300 max-w-[90%] mx-auto">
+            <div className="preview-card-shadow bg-white dark:bg-white/5 border border-[#dae5e7] dark:border-primary/30 rounded p-6 min-h-[180px] flex flex-col justify-between transition-all duration-300 max-w-[90%] mx-auto relative overflow-hidden">
+                <div className="absolute top-4 right-4 opacity-20 pointer-events-none">
+                     <Image src="/claunode_logo.png" alt="Logo" width={80} height={30} className="object-contain" />
+                </div>
                 <div className="flex flex-col gap-1">
                     <span className="text-primary text-[10px] font-bold tracking-[0.15em] uppercase mb-1">{formData.title || 'Job Title'}</span>
                     <h1 className="text-[#101818] dark:text-white text-2xl font-extrabold tracking-tighter leading-none mb-2">{formData.name || 'Your Name'}</h1>

@@ -76,6 +76,16 @@ export default async function UserCard({ params, searchParams }) {
                 <div id="user-card-visual" className="whisper-shadow flex flex-col items-stretch justify-start rounded-xl bg-white border border-gray-200 overflow-hidden">
                     
                     <div className="flex w-full flex-col items-start justify-center gap-2 px-8 py-8 min-h-[200px]">
+                        <div className="w-full flex justify-center pb-2">
+                             <Image 
+                                src="/claunode_logo.png" 
+                                alt="Claunode" 
+                                width={160} 
+                                height={60} 
+                                className="object-contain" 
+                                priority
+                             />
+                        </div>
                         <div className="flex w-full justify-between items-start">
                              {avatar ? (
                                 <div className="relative w-24 h-24 rounded-full overflow-hidden border-4 border-white shadow-lg">
